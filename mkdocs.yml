@@ -1,0 +1,41 @@
+site_name: ConcursoFácil
+
+repo_name: "concursofacil-docs"
+repo_url: "https://github.com/ConcursoFacil/concursofacil-docs"
+
+theme:
+  name: material
+  features:
+    - navigation.instant       
+    - navigation.tracking      
+    - navigation.tabs          
+    - navigation.tabs.sticky  
+    - navigation.top  
+  palette:
+    primary: blue
+    accent: green
+
+nav:
+  - Página Inicial: index.md
+  - Visão do Produto: produto/visao.md
+  - Requisitos:
+    - Requisitos de Software: requisitos/requisitos.md
+    - Backlog: requisitos/backlog.md
+    - Histórias de Usuário: requisitos/user_stories.md
+  - Arquitetura:
+    - Arquitetura: arquitetura/arquitetura.md
+    - UML: arquitetura/uml.md
+  - Protótipo: prototipo/prototipo.md
+  - Guias:
+    - Guia de Execução: guias/execucao.md
+    - Convenções de API: guias/api.md
+
+# Plugins
+plugins:
+  - search
+  - glightbox   
+
+# Extensões Markdown
+markdown_extensions:
+  - attr_list
+  - md_in_html
