@@ -26,9 +26,7 @@ nav:
     - Arquitetura: arquitetura/arquitetura.md
     - UML: arquitetura/uml.md
   - Protótipo: prototipo/prototipo.md
-  - Guias:
-    - Guia de Execução: guias/execucao.md
-    - Convenções de API: guias/api.md
+
 
 # Plugins
 plugins:
