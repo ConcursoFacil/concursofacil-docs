@@ -13,7 +13,7 @@ theme:
     - navigation.top  
   palette:
     primary: blue
-    accent: green
+    accent: blue
 
 nav:
   - Página Inicial: index.md
