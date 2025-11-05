@@ -25,6 +25,7 @@ nav:
   - Arquitetura:
     - Arquitetura: arquitetura/arquitetura.md
     - UML: arquitetura/uml.md
+    - Banco: arquitetura/banco.md
   - Protótipo: prototipo/prototipo.md
 
 
