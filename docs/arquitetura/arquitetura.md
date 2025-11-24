@@ -177,3 +177,5 @@ A arquitetura do ConcursoFácil foi planejada com foco em modularização, clare
 | **Data** | **Versão** | **Descrição** | **Autor** |
 | :--------: | :--------: | :--------:  | :--------: |
 | 10/09/2025 | 1.0 | Criação do Documento | Breno Fernandes |
+
+
