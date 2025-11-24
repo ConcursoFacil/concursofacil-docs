@@ -32,7 +32,8 @@ nav:
 # Plugins
 plugins:
   - search
-  - glightbox   
+  - glightbox
+  - mermaid2
 
 # Extensões Markdown
 markdown_extensions:
