@@ -1,0 +1,2170 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../backlog/">
+      
+      
+        <link rel="next" href="../../arquitetura/arquitetura/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Histórias de Usuário - ConcursoFácil Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#especificacao-dos-requisitos" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="ConcursoFácil Docs" class="md-header__button md-logo" aria-label="ConcursoFácil Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ConcursoFácil Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Histórias de Usuário
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ConcursoFacil/concursofacil-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    concursofacil-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Página Inicial
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../produto/visao/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Visão do Produto
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../requisitos/" class="md-tabs__link">
+          
+  
+  
+  Requisitos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../arquitetura/arquitetura/" class="md-tabs__link">
+          
+  
+  
+  Arquitetura
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../prototipo/prototipo/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Protótipo
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ConcursoFácil Docs" class="md-nav__button md-logo" aria-label="ConcursoFácil Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    ConcursoFácil Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ConcursoFacil/concursofacil-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    concursofacil-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Página Inicial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../produto/visao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão do Produto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Requisitos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Requisitos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../requisitos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Requisitos de Software
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../backlog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backlog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Histórias de Usuário
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Histórias de Usuário
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cenarios-bdds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cenários BDD's
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#casos-de-uso-acesso-e-autenticacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Casos de Uso – Acesso e Autenticação
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Casos de Uso – Acesso e Autenticação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#us-01-criar-conta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US-01 – Criar Conta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-02-fazer-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US-02 – Fazer Login
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-06-exibir-mensagens-claras-de-erro-e-sucesso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US-06 – Exibir Mensagens Claras de Erro e Sucesso
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-07-navegar-entre-login-cadastro-e-recuperacao-de-senha" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US-07 – Navegar entre Login, Cadastro e Recuperação de Senha
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#casos-de-uso-sidebar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Casos de Uso – Sidebar
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Casos de Uso – Sidebar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#us-08-visualizar-sidebar-fixa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US-08 – Visualizar Sidebar Fixa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-10-navegacao-pelos-botoes-da-sidebar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US-10 – Navegação pelos Botões da Sidebar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-13-ocultar-itens-para-usuarios-nao-autenticados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US-13 – Ocultar Itens para Usuários Não Autenticados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#casos-de-uso-perfil" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Casos de Uso – Perfil
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Casos de Uso – Perfil">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#us-15-acessar-tela-de-perfil" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US-15 – Acessar Tela de Perfil
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#casos-de-uso-configuracoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Casos de Uso – Configurações
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Casos de Uso – Configurações">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#us-22-acessar-tela-de-configuracoes-da-conta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US-22 – Acessar Tela de Configurações da Conta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-26-exibir-mensagens-claras-de-sucesso-ou-erro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US-26 – Exibir Mensagens Claras de Sucesso ou Erro
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#casos-de-uso-crud-de-questoes-admin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Casos de Uso – CRUD de Questões (Admin)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Casos de Uso – CRUD de Questões (Admin)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#us-29-acessar-tela-de-listagem-de-questoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US-29 – Acessar Tela de Listagem de Questões
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-30-buscar-questao-por-codigo-ou-enunciado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US-30 – Buscar Questão por Código ou Enunciado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-31-exibir-tabela-de-questoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US-31 – Exibir Tabela de Questões
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-32-criar-nova-questao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US-32 – Criar Nova Questão
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-38-exibir-mensagens-informativas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US-38 – Exibir Mensagens Informativas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-39-acesso-restrito-ao-administrador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US-39 – Acesso Restrito ao Administrador
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#casos-de-uso-questoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Casos de Uso – Questões
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Casos de Uso – Questões">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#us-40-acessar-tela-de-questoes-de-concurso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US-40 – Acessar Tela de Questões de Concurso
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-41-filtrar-questoes-por-parametros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US-41 – Filtrar Questões por Parâmetros
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-44-exibir-lista-de-questoes-conforme-filtros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US-44 – Exibir Lista de Questões Conforme Filtros
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-45-marcar-alternativa-e-responder-questao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US-45 – Marcar Alternativa e Responder Questão
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-46-exibir-resposta-correta-apos-responder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US-46 – Exibir Resposta Correta Após Responder
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#casos-de-uso-meu-painel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Casos de Uso – Meu Painel
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Casos de Uso – Meu Painel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#us-51-acessar-tela-de-painel-de-desempenho" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US-51 – Acessar Tela de Painel de Desempenho
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-52-visualizar-grafico-de-pizza-com-percentual-de-acertos-e-erros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US-52 – Visualizar Gráfico de Pizza com Percentual de Acertos e Erros
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-58-exibir-mensagens-informativas-em-caso-de-ausencia-de-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US-58 – Exibir Mensagens Informativas em Caso de Ausência de Dados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-59-exibir-mensagens-de-erro-ao-carregar-os-graficos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US-59 – Exibir Mensagens de Erro ao Carregar os Gráficos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histórico de Versão
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitetura
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Arquitetura
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/arquitetura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitetura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/uml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UML
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/banco/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Banco
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prototipo/prototipo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Protótipo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cenarios-bdds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cenários BDD's
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#casos-de-uso-acesso-e-autenticacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Casos de Uso – Acesso e Autenticação
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Casos de Uso – Acesso e Autenticação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#us-01-criar-conta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US-01 – Criar Conta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-02-fazer-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US-02 – Fazer Login
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-06-exibir-mensagens-claras-de-erro-e-sucesso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US-06 – Exibir Mensagens Claras de Erro e Sucesso
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-07-navegar-entre-login-cadastro-e-recuperacao-de-senha" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US-07 – Navegar entre Login, Cadastro e Recuperação de Senha
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#casos-de-uso-sidebar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Casos de Uso – Sidebar
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Casos de Uso – Sidebar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#us-08-visualizar-sidebar-fixa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US-08 – Visualizar Sidebar Fixa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-10-navegacao-pelos-botoes-da-sidebar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US-10 – Navegação pelos Botões da Sidebar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-13-ocultar-itens-para-usuarios-nao-autenticados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US-13 – Ocultar Itens para Usuários Não Autenticados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#casos-de-uso-perfil" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Casos de Uso – Perfil
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Casos de Uso – Perfil">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#us-15-acessar-tela-de-perfil" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US-15 – Acessar Tela de Perfil
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#casos-de-uso-configuracoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Casos de Uso – Configurações
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Casos de Uso – Configurações">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#us-22-acessar-tela-de-configuracoes-da-conta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US-22 – Acessar Tela de Configurações da Conta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-26-exibir-mensagens-claras-de-sucesso-ou-erro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US-26 – Exibir Mensagens Claras de Sucesso ou Erro
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#casos-de-uso-crud-de-questoes-admin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Casos de Uso – CRUD de Questões (Admin)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Casos de Uso – CRUD de Questões (Admin)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#us-29-acessar-tela-de-listagem-de-questoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US-29 – Acessar Tela de Listagem de Questões
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-30-buscar-questao-por-codigo-ou-enunciado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US-30 – Buscar Questão por Código ou Enunciado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-31-exibir-tabela-de-questoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US-31 – Exibir Tabela de Questões
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-32-criar-nova-questao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US-32 – Criar Nova Questão
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-38-exibir-mensagens-informativas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US-38 – Exibir Mensagens Informativas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-39-acesso-restrito-ao-administrador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US-39 – Acesso Restrito ao Administrador
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#casos-de-uso-questoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Casos de Uso – Questões
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Casos de Uso – Questões">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#us-40-acessar-tela-de-questoes-de-concurso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US-40 – Acessar Tela de Questões de Concurso
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-41-filtrar-questoes-por-parametros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US-41 – Filtrar Questões por Parâmetros
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-44-exibir-lista-de-questoes-conforme-filtros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US-44 – Exibir Lista de Questões Conforme Filtros
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-45-marcar-alternativa-e-responder-questao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US-45 – Marcar Alternativa e Responder Questão
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-46-exibir-resposta-correta-apos-responder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US-46 – Exibir Resposta Correta Após Responder
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#casos-de-uso-meu-painel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Casos de Uso – Meu Painel
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Casos de Uso – Meu Painel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#us-51-acessar-tela-de-painel-de-desempenho" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US-51 – Acessar Tela de Painel de Desempenho
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-52-visualizar-grafico-de-pizza-com-percentual-de-acertos-e-erros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US-52 – Visualizar Gráfico de Pizza com Percentual de Acertos e Erros
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-58-exibir-mensagens-informativas-em-caso-de-ausencia-de-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US-58 – Exibir Mensagens Informativas em Caso de Ausência de Dados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-59-exibir-mensagens-de-erro-ao-carregar-os-graficos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        US-59 – Exibir Mensagens de Erro ao Carregar os Gráficos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histórico de Versão
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="especificacao-dos-requisitos">Especificação dos Requisitos</h1>
+<h2 id="cenarios-bdds">Cenários BDD's</h2>
+<p>Abaixo estão os cartões e confirmações das histórias selecionadas para o <strong>MVP do ConcursoFácil</strong>.</p>
+<hr>
+<h2 id="casos-de-uso-acesso-e-autenticacao"><strong>Casos de Uso – Acesso e Autenticação</strong></h2>
+<hr>
+<h3 id="us-01-criar-conta"><strong>US-01 – Criar Conta</strong></h3>
+<p><strong>Cenário 1: Cadastro bem-sucedido</strong></p>
+<ul>
+<li><strong>Dado que</strong> um usuário deseja criar uma conta,  </li>
+<li><strong>Quando</strong> preencher corretamente os campos obrigatórios (<em>nome, e-mail, senha e confirmação de senha</em>),  </li>
+<li><strong>Então</strong> o sistema deve registrar os dados e exibir a mensagem:<br>
+<em>“Conta criada com sucesso.”</em></li>
+</ul>
+<p><strong>Cenário 2: Campos inválidos ou ausentes</strong></p>
+<ul>
+<li><strong>Dado que</strong> o usuário está criando uma conta,  </li>
+<li><strong>Quando</strong> deixar algum campo obrigatório em branco ou inserir dados inválidos (<em>ex.: e-mail incorreto ou senhas diferentes</em>),  </li>
+<li><strong>Então</strong> o sistema deve exibir mensagens de erro específicas indicando o problema.</li>
+</ul>
+<p><strong>Cenário 3: E-mail já cadastrado</strong></p>
+<ul>
+<li><strong>Dado que</strong> o usuário tenta criar uma conta com um e-mail já existente,  </li>
+<li><strong>Quando</strong> enviar o formulário de cadastro,  </li>
+<li><strong>Então</strong> o sistema deve impedir o registro e exibir:<br>
+<em>“E-mail já cadastrado. Tente outro ou faça login.”</em></li>
+</ul>
+<hr>
+<h3 id="us-02-fazer-login"><strong>US-02 – Fazer Login</strong></h3>
+<p><strong>Cenário 1: Login bem-sucedido</strong></p>
+<ul>
+<li><strong>Dado que</strong> um usuário já possui uma conta válida,  </li>
+<li><strong>Quando</strong> informar corretamente o e-mail e a senha,  </li>
+<li><strong>Então</strong> o sistema deve autenticar o usuário e redirecioná-lo para a tela inicial logada.</li>
+</ul>
+<p><strong>Cenário 2: Credenciais incorretas</strong></p>
+<ul>
+<li><strong>Dado que</strong> o usuário tenta acessar sua conta,  </li>
+<li><strong>Quando</strong> informar e-mail ou senha incorretos,  </li>
+<li><strong>Então</strong> o sistema deve exibir:<br>
+<em>“E-mail ou senha incorretos.”</em></li>
+</ul>
+<p><strong>Cenário 3: Campos não preenchidos</strong></p>
+<ul>
+<li><strong>Dado que</strong> o usuário está na tela de login,  </li>
+<li><strong>Quando</strong> tentar entrar sem preencher todos os campos obrigatórios,  </li>
+<li><strong>Então</strong> o sistema deve exibir mensagens como:<br>
+<em>“Informe seu e-mail.”</em><br>
+<em>“Informe sua senha.”</em></li>
+</ul>
+<hr>
+<h3 id="us-06-exibir-mensagens-claras-de-erro-e-sucesso"><strong>US-06 – Exibir Mensagens Claras de Erro e Sucesso</strong></h3>
+<p><strong>Cenário 1: Mensagens de sucesso</strong> </p>
+<ul>
+<li><strong>Dado que</strong> o usuário conclui uma ação corretamente (<em>como cadastro ou login</em>),  </li>
+<li><strong>Quando</strong> o sistema processar a requisição com êxito,  </li>
+<li><strong>Então</strong> deve exibir mensagens claras e visuais, como:<br>
+<em>“Login realizado com sucesso.”</em><br>
+<em>“Conta criada com sucesso.”</em></li>
+</ul>
+<p><strong>Cenário 2: Mensagens de erro</strong></p>
+<ul>
+<li><strong>Dado que</strong> ocorre um erro de validação, credencial ou servidor,  </li>
+<li><strong>Quando</strong> o sistema detectar o problema,  </li>
+<li><strong>Então</strong> deve apresentar mensagens explicativas como:<br>
+<em>“Não foi possível entrar agora. Tente novamente.”</em><br>
+<em>“E-mail ou senha incorretos.”</em><br>
+<em>“Campo obrigatório não preenchido.”</em></li>
+</ul>
+<hr>
+<h3 id="us-07-navegar-entre-login-cadastro-e-recuperacao-de-senha"><strong>US-07 – Navegar entre Login, Cadastro e Recuperação de Senha</strong></h3>
+<p><strong>Cenário 1: Acesso à tela de cadastro</strong></p>
+<ul>
+<li><strong>Dado que</strong> o usuário está na tela de login,  </li>
+<li><strong>Quando</strong> clicar no link <em>“Cadastre-se”</em>,  </li>
+<li><strong>Então</strong> o sistema deve redirecionar o usuário para a tela de Cadastro de Conta.</li>
+</ul>
+<p><strong>Cenário 2: Acesso à tela de recuperação de senha</strong></p>
+<ul>
+<li><strong>Dado que</strong> o usuário está na tela de login,  </li>
+<li><strong>Quando</strong> clicar em <em>“Esqueci minha senha”</em>,  </li>
+<li><strong>Então</strong> o sistema deve redirecioná-lo para a tela de Recuperação de Senha.</li>
+</ul>
+<p><strong>Cenário 3: Retorno para a tela de login</strong></p>
+<ul>
+<li><strong>Dado que</strong> o usuário está na tela de cadastro ou recuperação,  </li>
+<li><strong>Quando</strong> clicar em <em>“Já tenho uma conta”</em>,  </li>
+<li><strong>Então</strong> o sistema deve redirecioná-lo de volta para a tela de Login.</li>
+</ul>
+<h2 id="casos-de-uso-sidebar"><strong>Casos de Uso – Sidebar</strong></h2>
+<hr>
+<h3 id="us-08-visualizar-sidebar-fixa"><strong>US-08 – Visualizar Sidebar Fixa</strong></h3>
+<p><strong>Cenário 1: Exibição da sidebar após login</strong></p>
+<ul>
+<li><strong>Dado que</strong> o usuário está autenticado no sistema,  </li>
+<li><strong>Quando</strong> acessar qualquer tela principal (<em>como Questões, Dashboard ou Configurações</em>),  </li>
+<li><strong>Então</strong> o sistema deve exibir uma <strong>sidebar fixa</strong> na lateral esquerda com os <strong>botões principais de navegação</strong>.</li>
+</ul>
+<p><strong>Cenário 2: Sidebar ausente antes do login</strong></p>
+<ul>
+<li><strong>Dado que</strong> o usuário ainda não está autenticado,  </li>
+<li><strong>Quando</strong> acessar páginas públicas (<em>como Login ou Cadastro</em>),  </li>
+<li><strong>Então</strong> a <strong>sidebar não deve ser exibida</strong>, garantindo uma <strong>interface limpa e segura</strong>.</li>
+</ul>
+<hr>
+<h3 id="us-10-navegacao-pelos-botoes-da-sidebar"><strong>US-10 – Navegação pelos Botões da Sidebar</strong></h3>
+<p><strong>Cenário 1: Redirecionamento entre telas</strong></p>
+<ul>
+<li><strong>Dado que</strong> o usuário está autenticado e visualiza a sidebar,  </li>
+<li><strong>Quando</strong> clicar em um botão de menu (<em>ex.: Questões, Dashboard, Configurações</em>),  </li>
+<li><strong>Então</strong> o sistema deve <strong>redirecionar o usuário</strong> para a <strong>tela correspondente</strong>.</li>
+</ul>
+<p><strong>Cenário 2: Feedback visual no clique</strong></p>
+<ul>
+<li><strong>Dado que</strong> o usuário interage com um botão da sidebar,  </li>
+<li><strong>Quando</strong> clicar em um item,  </li>
+<li><strong>Então</strong> o botão deve apresentar um <strong>feedback visual de seleção</strong> (<em>ex.: cor ou destaque leve</em>) para indicar a interação.</li>
+</ul>
+<hr>
+<h3 id="us-13-ocultar-itens-para-usuarios-nao-autenticados"><strong>US-13 – Ocultar Itens para Usuários Não Autenticados</strong></h3>
+<p><strong>Cenário 1: Restrições para usuários não autenticados</strong></p>
+<ul>
+<li><strong>Dado que</strong> o usuário não fez login,  </li>
+<li><strong>Quando</strong> acessar o sistema,  </li>
+<li><strong>Então</strong> os <strong>botões e menus da sidebar</strong> devem estar <strong>ocultos ou desativados</strong>, impedindo <strong>acesso a áreas restritas</strong>.</li>
+</ul>
+<p><strong>Cenário 2: Exibição após autenticação</strong></p>
+<ul>
+<li><strong>Dado que</strong> o usuário está autenticado,  </li>
+<li><strong>Quando</strong> o login for concluído com sucesso,  </li>
+<li><strong>Então</strong> o sistema deve <strong>exibir automaticamente todos os itens da sidebar</strong> disponíveis para o <strong>perfil do usuário</strong> (<em>padrão ou administrador</em>).</li>
+</ul>
+<h2 id="casos-de-uso-perfil"><strong>Casos de Uso – Perfil</strong></h2>
+<hr>
+<h3 id="us-15-acessar-tela-de-perfil"><strong>US-15 – Acessar Tela de Perfil</strong></h3>
+<p><strong>Cenário 1: Acesso ao perfil autenticado</strong></p>
+<ul>
+<li><strong>Dado que</strong> o usuário está autenticado no sistema,  </li>
+<li><strong>Quando</strong> clicar na opção <em>“Perfil”</em> na sidebar ou menu,  </li>
+<li><strong>Então</strong> o sistema deve <strong>redirecionar para a tela de perfil</strong>, exibindo as <strong>informações básicas do usuário</strong> (<em>ex.: nome, e-mail e função/cargo, se disponível</em>).</li>
+</ul>
+<p><strong>Cenário 2: Acesso negado para usuário não autenticado</strong></p>
+<ul>
+<li><strong>Dado que</strong> o usuário não realizou login,  </li>
+<li><strong>Quando</strong> tentar acessar a rota ou URL da tela de perfil,  </li>
+<li><strong>Então</strong> o sistema deve <strong>redirecionar para a tela de login</strong> e exibir a mensagem:<br>
+<em>“Faça login para acessar seu perfil.”</em></li>
+</ul>
+<p><strong>Cenário 3: Falha ao carregar dados</strong></p>
+<ul>
+<li><strong>Dado que</strong> o usuário está autenticado,  </li>
+<li><strong>Quando</strong> o sistema não conseguir carregar as informações do perfil (<em>por erro de conexão ou falha no servidor</em>),  </li>
+<li><strong>Então</strong> deve exibir uma mensagem informativa:<br>
+<em>“Não foi possível carregar suas informações agora. Tente novamente mais tarde.”</em></li>
+</ul>
+<p><strong>Cenário 4: Exibição de informações básicas</strong></p>
+<ul>
+<li><strong>Dado que</strong> o usuário acessou com sucesso a tela de perfil,  </li>
+<li><strong>Quando</strong> a página for carregada,  </li>
+<li><strong>Então</strong> devem ser exibidos os <strong>campos básicos cadastrados</strong> (<em>nome, e-mail e, se disponível, função/cargo</em>) em formato <strong>somente leitura</strong>.</li>
+</ul>
+<h2 id="casos-de-uso-configuracoes"><strong>Casos de Uso – Configurações</strong></h2>
+<hr>
+<h3 id="us-22-acessar-tela-de-configuracoes-da-conta"><strong>US-22 – Acessar Tela de Configurações da Conta</strong></h3>
+<p><strong>Cenário 1: Acesso autorizado</strong></p>
+<ul>
+<li><strong>Dado que</strong> o usuário está autenticado no sistema,  </li>
+<li><strong>Quando</strong> clicar no menu ou botão <em>“Configurações”</em>,  </li>
+<li><strong>Então</strong> o sistema deve <strong>redirecioná-lo para a tela de configurações da conta</strong>, exibindo os <strong>campos disponíveis</strong> (<em>nome, e-mail e demais informações básicas</em>).</li>
+</ul>
+<p><strong>Cenário 2: Acesso negado a usuário não autenticado</strong></p>
+<ul>
+<li><strong>Dado que</strong> o usuário não realizou login,  </li>
+<li><strong>Quando</strong> tentar acessar diretamente a tela de configurações via URL,  </li>
+<li><strong>Então</strong> o sistema deve <strong>redirecionar o usuário para a tela de login</strong>, exibindo a mensagem:<br>
+<em>“Você precisa estar logado para acessar as configurações da conta.”</em></li>
+</ul>
+<p><strong>Cenário 3: Falha ao carregar dados do usuário</strong></p>
+<ul>
+<li><strong>Dado que</strong> o usuário está autenticado,  </li>
+<li><strong>Quando</strong> o sistema não conseguir carregar suas informações por erro técnico,  </li>
+<li><strong>Então</strong> deve exibir uma mensagem informativa:<br>
+<em>“Não foi possível carregar suas informações. Tente novamente mais tarde.”</em></li>
+</ul>
+<hr>
+<h3 id="us-26-exibir-mensagens-claras-de-sucesso-ou-erro"><strong>US-26 – Exibir Mensagens Claras de Sucesso ou Erro</strong></h3>
+<p><strong>Cenário 1: Alteração bem-sucedida</strong></p>
+<ul>
+<li><strong>Dado que</strong> o usuário está na tela de configurações,  </li>
+<li><strong>Quando</strong> preencher e salvar os dados corretamente,  </li>
+<li><strong>Então</strong> o sistema deve exibir uma mensagem de confirmação:<br>
+<em>“Alterações salvas com sucesso.”</em></li>
+</ul>
+<p><strong>Cenário 2: Falha na atualização</strong></p>
+<ul>
+<li><strong>Dado que</strong> o usuário tenta salvar alterações,  </li>
+<li><strong>Quando</strong> ocorrer erro de validação (<em>campo vazio, formato inválido ou problema no servidor</em>),  </li>
+<li><strong>Então</strong> o sistema deve exibir uma <strong>mensagem de erro clara e explicativa</strong>, como:<br>
+<em>“Não foi possível salvar as alterações. Verifique os dados e tente novamente.”</em></li>
+</ul>
+<p><strong>Cenário 3: Problema de conexão ou timeout</strong></p>
+<ul>
+<li><strong>Dado que</strong> o usuário tenta atualizar as informações,  </li>
+<li><strong>Quando</strong> houver falha na comunicação com o servidor,  </li>
+<li><strong>Então</strong> deve ser exibida uma mensagem genérica de falha:<br>
+<em>“Erro ao conectar com o servidor. Por favor, tente novamente mais tarde.”</em></li>
+</ul>
+<h2 id="casos-de-uso-crud-de-questoes-admin"><strong>Casos de Uso – CRUD de Questões (Admin)</strong></h2>
+<hr>
+<h3 id="us-29-acessar-tela-de-listagem-de-questoes"><strong>US-29 – Acessar Tela de Listagem de Questões</strong></h3>
+<p><strong>Cenário 1: Acesso permitido ao administrador</strong></p>
+<ul>
+<li><strong>Dado que</strong> o usuário possui perfil de administrador,  </li>
+<li><strong>Quando</strong> acessar o menu <em>“CRUD de Questões”</em>,  </li>
+<li><strong>Então</strong> o sistema deve <strong>exibir a tela de listagem de questões</strong>, mostrando <strong>todas as questões cadastradas no sistema</strong>.</li>
+</ul>
+<p><strong>Cenário 2: Acesso negado para usuários comuns</strong></p>
+<ul>
+<li><strong>Dado que</strong> o usuário não é administrador,  </li>
+<li><strong>Quando</strong> tentar acessar a rota do CRUD de questões,  </li>
+<li><strong>Então</strong> o sistema deve <strong>negar o acesso</strong> e exibir a mensagem:<br>
+<em>“Acesso restrito. Apenas administradores podem gerenciar as questões.”</em></li>
+</ul>
+<hr>
+<h3 id="us-30-buscar-questao-por-codigo-ou-enunciado"><strong>US-30 – Buscar Questão por Código ou Enunciado</strong></h3>
+<p><strong>Cenário 1: Busca com resultado encontrado</strong></p>
+<ul>
+<li><strong>Dado que</strong> o administrador está na tela de listagem,  </li>
+<li><strong>Quando</strong> digitar um código ou trecho do enunciado no campo de busca e confirmar,  </li>
+<li><strong>Então</strong> o sistema deve <strong>exibir apenas as questões correspondentes</strong> aos critérios pesquisados.</li>
+</ul>
+<p><strong>Cenário 2: Busca sem resultados</strong></p>
+<ul>
+<li><strong>Dado que</strong> o administrador realiza uma busca,  </li>
+<li><strong>Quando</strong> não houver correspondências,  </li>
+<li><strong>Então</strong> o sistema deve exibir a mensagem:<br>
+<em>“Nenhuma questão encontrada para os critérios informados.”</em></li>
+</ul>
+<hr>
+<h3 id="us-31-exibir-tabela-de-questoes"><strong>US-31 – Exibir Tabela de Questões</strong></h3>
+<p><strong>Cenário 1: Exibição padrão</strong></p>
+<ul>
+<li><strong>Dado que</strong> o administrador acessou a tela de listagem,  </li>
+<li><strong>Quando</strong> a página for carregada,  </li>
+<li><strong>Então</strong> o sistema deve exibir uma <strong>tabela com as seguintes colunas</strong>:  </li>
+<li>Código  </li>
+<li>Enunciado  </li>
+<li>Tipo  </li>
+<li>Dificuldade  </li>
+<li>Ano  </li>
+<li>Ações (<em>ex.: Editar, Excluir</em>)</li>
+</ul>
+<p><strong>Cenário 2: Nenhuma questão cadastrada</strong></p>
+<ul>
+<li><strong>Dado que</strong> o sistema não possui questões registradas,  </li>
+<li><strong>Quando</strong> o administrador acessar a listagem,  </li>
+<li><strong>Então</strong> deve ser exibida a mensagem:<br>
+<em>“Nenhuma questão cadastrada no momento.”</em></li>
+</ul>
+<hr>
+<h3 id="us-32-criar-nova-questao"><strong>US-32 – Criar Nova Questão</strong></h3>
+<p><strong>Cenário 1: Criação bem-sucedida</strong></p>
+<ul>
+<li><strong>Dado que</strong> o administrador está na tela de cadastro de questões,  </li>
+<li><strong>Quando</strong> preencher todos os campos obrigatórios (<em>enunciado, alternativas, resposta correta e metadados</em>),  </li>
+<li><strong>Então</strong> o sistema deve <strong>salvar a nova questão</strong> e exibir a mensagem:<br>
+<em>“Questão cadastrada com sucesso.”</em></li>
+</ul>
+<p><strong>Cenário 2: Campos obrigatórios não preenchidos</strong></p>
+<ul>
+<li><strong>Dado que</strong> o administrador tenta criar uma questão,  </li>
+<li><strong>Quando</strong> deixar campos obrigatórios vazios ou inválidos,  </li>
+<li><strong>Então</strong> o sistema deve exibir <strong>mensagens de erro específicas</strong>, indicando os campos que precisam ser corrigidos.</li>
+</ul>
+<hr>
+<h3 id="us-38-exibir-mensagens-informativas"><strong>US-38 – Exibir Mensagens Informativas</strong></h3>
+<p><strong>Cenário 1: Operação bem-sucedida</strong></p>
+<ul>
+<li><strong>Dado que</strong> o administrador executou uma ação (<em>criar, editar ou excluir</em>),  </li>
+<li><strong>Quando</strong> a operação for concluída com sucesso,  </li>
+<li><strong>Então</strong> o sistema deve exibir uma <strong>mensagem informativa positiva</strong>, como:<br>
+<em>“Ação concluída com sucesso.”</em></li>
+</ul>
+<p><strong>Cenário 2: Falha na operação</strong></p>
+<ul>
+<li><strong>Dado que</strong> o administrador realiza uma ação de gerenciamento,  </li>
+<li><strong>Quando</strong> ocorrer erro de validação ou falha no servidor,  </li>
+<li><strong>Então</strong> o sistema deve exibir uma <strong>mensagem de erro clara</strong>:<br>
+<em>“Não foi possível concluir a operação. Tente novamente mais tarde.”</em></li>
+</ul>
+<hr>
+<h3 id="us-39-acesso-restrito-ao-administrador"><strong>US-39 – Acesso Restrito ao Administrador</strong></h3>
+<p><strong>Cenário 1: Controle de acesso</strong></p>
+<ul>
+<li><strong>Dado que</strong> o sistema possui diferentes perfis de usuário,  </li>
+<li><strong>Quando</strong> um usuário sem perfil administrativo tentar acessar a área de gestão de questões,  </li>
+<li><strong>Então</strong> o sistema deve <strong>bloquear o acesso</strong> e <strong>redirecioná-lo à página inicial</strong>, exibindo a mensagem:<br>
+<em>“Acesso negado. Essa área é exclusiva para administradores.”</em></li>
+</ul>
+<p><strong>Cenário 2: Acesso válido</strong></p>
+<ul>
+<li><strong>Dado que</strong> o usuário é administrador,  </li>
+<li><strong>Quando</strong> acessar o módulo de gerenciamento,  </li>
+<li><strong>Então</strong> o sistema deve <strong>conceder acesso total</strong> às funcionalidades de <strong>visualização e criação de questões</strong>.</li>
+</ul>
+<h2 id="casos-de-uso-questoes"><strong>Casos de Uso – Questões</strong></h2>
+<hr>
+<h3 id="us-40-acessar-tela-de-questoes-de-concurso"><strong>US-40 – Acessar Tela de Questões de Concurso</strong></h3>
+<p><strong>Cenário 1: Acesso autorizado</strong></p>
+<ul>
+<li><strong>Dado que</strong> o usuário está autenticado no sistema,  </li>
+<li><strong>Quando</strong> clicar na opção <em>“Questões”</em> na sidebar,  </li>
+<li><strong>Então</strong> o sistema deve <strong>carregar a tela de questões de concurso</strong>, exibindo os <strong>filtros</strong> e a <strong>área de listagem</strong>.</li>
+</ul>
+<p><strong>Cenário 2: Acesso negado</strong></p>
+<ul>
+<li><strong>Dado que</strong> o usuário não está autenticado,  </li>
+<li><strong>Quando</strong> tentar acessar a tela de questões,  </li>
+<li><strong>Então</strong> o sistema deve <strong>redirecionar para a tela de login</strong> e exibir a mensagem:<br>
+<em>“Você precisa estar logado para acessar as questões.”</em></li>
+</ul>
+<hr>
+<h3 id="us-41-filtrar-questoes-por-parametros"><strong>US-41 – Filtrar Questões por Parâmetros</strong></h3>
+<p><strong>Cenário 1: Filtro simples aplicado</strong></p>
+<ul>
+<li><strong>Dado que</strong> o usuário está na tela de questões,  </li>
+<li><strong>Quando</strong> selecionar um ou mais filtros (<em>ex.: disciplina e banca</em>) e clicar em <em>Filtrar</em>,  </li>
+<li><strong>Então</strong> o sistema deve <strong>exibir apenas as questões</strong> que correspondem aos filtros aplicados.</li>
+</ul>
+<p><strong>Cenário 2: Nenhum filtro aplicado</strong></p>
+<ul>
+<li><strong>Dado que</strong> o usuário não selecionou nenhum filtro,  </li>
+<li><strong>Quando</strong> clicar em <em>Filtrar</em>,  </li>
+<li><strong>Então</strong> o sistema deve <strong>exibir todas as questões disponíveis</strong>.</li>
+</ul>
+<p><strong>Cenário 3: Filtro sem resultados</strong></p>
+<ul>
+<li><strong>Dado que</strong> o usuário aplicou filtros,  </li>
+<li><strong>Quando</strong> não existirem questões compatíveis,  </li>
+<li><strong>Então</strong> o sistema deve exibir a mensagem:<br>
+<em>“Nenhuma questão encontrada para os filtros selecionados.”</em></li>
+</ul>
+<hr>
+<h3 id="us-44-exibir-lista-de-questoes-conforme-filtros"><strong>US-44 – Exibir Lista de Questões Conforme Filtros</strong></h3>
+<p><strong>Cenário 1: Listagem com resultados</strong></p>
+<ul>
+<li><strong>Dado que</strong> o usuário aplicou filtros válidos,  </li>
+<li><strong>Quando</strong> o sistema retornar questões correspondentes,  </li>
+<li><strong>Então</strong> deve exibi-las em <strong>cards individuais</strong> contendo:  </li>
+<li>Número da questão  </li>
+<li>Disciplina e assunto  </li>
+<li>Ano, banca e órgão  </li>
+<li>Enunciado  </li>
+<li>Alternativas de resposta</li>
+</ul>
+<p><strong>Cenário 2: Nenhuma questão encontrada</strong></p>
+<ul>
+<li><strong>Dado que</strong> o filtro aplicado não possui resultados,  </li>
+<li><strong>Quando</strong> a busca for concluída,  </li>
+<li><strong>Então</strong> deve ser exibida uma <strong>área vazia</strong> ou <strong>mensagem discreta</strong> indicando ausência de resultados.</li>
+</ul>
+<hr>
+<h3 id="us-45-marcar-alternativa-e-responder-questao"><strong>US-45 – Marcar Alternativa e Responder Questão</strong></h3>
+<p><strong>Cenário 1: Resposta enviada com sucesso</strong></p>
+<ul>
+<li><strong>Dado que</strong> o usuário está visualizando uma questão,  </li>
+<li><strong>Quando</strong> selecionar uma alternativa e clicar em <em>Responder</em>,  </li>
+<li><strong>Então</strong> o sistema deve <strong>registrar a resposta</strong> e exibir o <strong>resultado da questão</strong> (<em>acerto ou erro</em>).</li>
+</ul>
+<p><strong>Cenário 2: Nenhuma alternativa selecionada</strong></p>
+<ul>
+<li><strong>Dado que</strong> o usuário não marcou nenhuma alternativa,  </li>
+<li><strong>Quando</strong> clicar em <em>Responder</em>,  </li>
+<li><strong>Então</strong> o sistema deve exibir a mensagem:<br>
+<em>“Selecione uma alternativa antes de enviar sua resposta.”</em></li>
+</ul>
+<hr>
+<h3 id="us-46-exibir-resposta-correta-apos-responder"><strong>US-46 – Exibir Resposta Correta Após Responder</strong></h3>
+<p><strong>Cenário 1: Exibição de resultado</strong></p>
+<ul>
+<li><strong>Dado que</strong> o usuário respondeu a questão,  </li>
+<li><strong>Quando</strong> o sistema processar a resposta,  </li>
+<li><strong>Então</strong> deve <strong>exibir a</strong></li>
+</ul>
+<h2 id="casos-de-uso-meu-painel"><strong>Casos de Uso – Meu Painel</strong></h2>
+<hr>
+<h3 id="us-51-acessar-tela-de-painel-de-desempenho"><strong>US-51 – Acessar Tela de Painel de Desempenho</strong></h3>
+<p><strong>Cenário 1: Acesso autorizado</strong></p>
+<ul>
+<li><strong>Dado que</strong> o usuário está autenticado no sistema,  </li>
+<li><strong>Quando</strong> clicar na opção <em>“Meu Painel”</em> na sidebar,  </li>
+<li><strong>Então</strong> o sistema deve <strong>redirecioná-lo para a tela de painel de desempenho</strong>, exibindo as <strong>informações de progresso</strong> e os <strong>gráficos disponíveis</strong>.</li>
+</ul>
+<p><strong>Cenário 2: Acesso negado</strong></p>
+<ul>
+<li><strong>Dado que</strong> o usuário não está autenticado,  </li>
+<li><strong>Quando</strong> tentar acessar o painel de desempenho,  </li>
+<li><strong>Então</strong> o sistema deve <strong>redirecionar o usuário para a tela de login</strong>, exibindo a mensagem:<br>
+<em>“Você precisa estar logado para visualizar seu desempenho.”</em></li>
+</ul>
+<hr>
+<h3 id="us-52-visualizar-grafico-de-pizza-com-percentual-de-acertos-e-erros"><strong>US-52 – Visualizar Gráfico de Pizza com Percentual de Acertos e Erros</strong></h3>
+<p><strong>Cenário 1: Gráfico exibido corretamente</strong></p>
+<ul>
+<li><strong>Dado que</strong> o usuário acessou o painel de desempenho,  </li>
+<li><strong>Quando</strong> houver dados registrados de questões resolvidas,  </li>
+<li><strong>Então</strong> o sistema deve <strong>exibir um gráfico de pizza</strong> mostrando o <strong>percentual de acertos e erros</strong>.</li>
+</ul>
+<p><strong>Cenário 2: Sem dados para exibir</strong></p>
+<ul>
+<li><strong>Dado que</strong> o usuário acessou o painel,  </li>
+<li><strong>Quando</strong> não houver registros de questões resolvidas,  </li>
+<li><strong>Então</strong> o sistema deve <strong>exibir uma mensagem informativa</strong>:<br>
+<em>“Nenhum dado disponível para exibição.”</em></li>
+</ul>
+<hr>
+<h3 id="us-58-exibir-mensagens-informativas-em-caso-de-ausencia-de-dados"><strong>US-58 – Exibir Mensagens Informativas em Caso de Ausência de Dados</strong></h3>
+<p><strong>Cenário 1: Nenhum registro encontrado</strong></p>
+<ul>
+<li><strong>Dado que</strong> o usuário aplicou filtros de tempo (<em>ex.: últimos 7 dias</em>) e não há registros,  </li>
+<li><strong>Quando</strong> o sistema tentar gerar os gráficos,  </li>
+<li><strong>Então</strong> deve exibir uma <strong>mensagem clara</strong>:<br>
+<em>“Nenhum dado disponível para o período selecionado.”</em></li>
+</ul>
+<p><strong>Cenário 2: Exibição padrão sem erro</strong></p>
+<ul>
+<li><strong>Dado que</strong> o sistema carregou corretamente os dados,  </li>
+<li><strong>Quando</strong> existirem registros,  </li>
+<li><strong>Então</strong> as <strong>mensagens informativas</strong> não devem ser exibidas, apenas os <strong>gráficos correspondentes</strong>.</li>
+</ul>
+<hr>
+<h3 id="us-59-exibir-mensagens-de-erro-ao-carregar-os-graficos"><strong>US-59 – Exibir Mensagens de Erro ao Carregar os Gráficos</strong></h3>
+<p><strong>Cenário 1: Falha na conexão com o servidor</strong></p>
+<ul>
+<li><strong>Dado que</strong> o usuário está na tela de painel,  </li>
+<li><strong>Quando</strong> ocorrer um erro de conexão ou falha na API de dados,  </li>
+<li><strong>Então</strong> o sistema deve exibir uma <strong>mensagem clara de erro</strong>:<br>
+<em>“Não foi possível carregar os gráficos. Tente novamente mais tarde.”</em></li>
+</ul>
+<p><strong>Cenário 2: Erro inesperado no carregamento</strong></p>
+<ul>
+<li><strong>Dado que</strong> o sistema apresentou um erro interno,  </li>
+<li><strong>Quando</strong> o gráfico não puder ser renderizado,  </li>
+<li><strong>Então</strong> deve exibir uma <strong>mensagem genérica</strong>:<br>
+<em>“Ocorreu um erro ao carregar as informações de desempenho.”</em></li>
+</ul>
+<hr>
+<h2 id="historico-de-versao">Histórico de Versão</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>Data</strong></th>
+<th style="text-align: center;"><strong>Versão</strong></th>
+<th style="text-align: center;"><strong>Descrição</strong></th>
+<th style="text-align: center;"><strong>Autor</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">17/09/2025</td>
+<td style="text-align: center;">1.0</td>
+<td style="text-align: center;">Criação da especificação dos requisitos (MVP)</td>
+<td style="text-align: center;">Breno Fernandes</td>
+</tr>
+<tr>
+<td style="text-align: center;">18/09/2025</td>
+<td style="text-align: center;">1.1</td>
+<td style="text-align: center;">Adição dos cenários BDD das histórias do MVP (Acesso, Sidebar, Perfil, Configurações, CRUD, Questões)</td>
+<td style="text-align: center;">Breno Fernandes</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
