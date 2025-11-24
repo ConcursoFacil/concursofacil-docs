@@ -6,10 +6,10 @@ repo_url: "https://github.com/ConcursoFacil/concursofacil-docs"
 theme:
   name: material
   features:
-    - navigation.instant
-    - navigation.tracking
-    - navigation.tabs
-    - navigation.tabs.sticky
+    - navigation.instant       
+    - navigation.tracking      
+    - navigation.tabs          
+    - navigation.tabs.sticky  
     - navigation.top  
   palette:
     primary: blue
@@ -28,23 +28,14 @@ nav:
     - Banco: arquitetura/banco.md
   - Protótipo: prototipo/prototipo.md
 
+
+# Plugins
 plugins:
   - search
   - glightbox
-  - mermaid2     # ✔️ plugin certo
+  - mermaid2
 
+# Extensões Markdown
 markdown_extensions:
   - attr_list
   - md_in_html
-  - pymdownx.superfences
-  - pymdownx.tabbed
-  - pymdownx.details
-  - pymdownx.highlight
-
-extra_javascript:
-  - https://unpkg.com/mermaid@10.4.0/dist/mermaid.min.js   # ✔️ necessário para GitHub Pages
-
-extra:
-  mermaid2:
-    arguments:
-      theme: neutral
