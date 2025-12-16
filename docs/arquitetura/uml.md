@@ -34,7 +34,172 @@ O diagrama de classe UML abaixo representa a **estrutura estática** atual do si
 
 ---
 
-## Diagrama
+## Diagrama do MVP
+
+```mermaid
+classDiagram
+
+    %% ============================
+    %% GRUPO: CONTROLLERS
+    %% ============================
+
+    class AuthController {
+        +register(Request)
+        +forgotPassword(Request)
+        +verifyCode(Request)
+        +resetPassword(Request)
+        +login(Request)
+        +logout(Request)
+    }
+
+    class UsuarioController {
+        +index()
+        +show(id)
+        +update(Request, id)
+        +destroy(id)
+    }
+
+    class DisciplinaController {
+        +index(Request)
+        +store(Request)
+        +update(Request, id)
+        +show(id)
+        +destroy(id)
+    }
+
+    class QuestaoController {
+        +filtros()
+        +praticar(Request)
+        +index(Request)
+        +store(Request)
+        +show(id)
+        +update(Request, id)
+        +destroy(id)
+    }
+
+    class ResolucaoQuestaoController {
+        +store(Request)
+        +show(id)
+        +historicoDetalhado(Request)
+    }
+
+    class DashboardController {
+        +geral(Request)
+        +historicoResolucoes(Request)
+    }
+
+    %% ============================
+    %% GRUPO: MODELS (AUTENTICAÇÃO)
+    %% ============================
+
+    class Usuario {
+        +id_usuario: int
+        +id_perfil: int
+        +primeiro_nome: string
+        +ultimo_nome: string
+        +username: string
+        +email: string
+        +senha_hash: string
+        +foto_url: string
+        +cargo: string
+        +educacao: string
+        +habilidades: string
+        +notas: string
+        +ativo: bool
+        +ultimo_login: datetime
+    }
+
+    class TokenVerificacao {
+        +id_token: int
+        +id_usuario: int
+        +tipo: string
+        +codigo: string
+        +expira_em: datetime
+        +usado: bool
+    }
+
+    %% ============================
+    %% GRUPO: MODELS (QUESTÕES)
+    %% ============================
+
+    class Disciplina {
+        +id_disciplina: int
+        +nome: string
+    }
+
+    class Questao {
+        +id_questao: int
+        +codigo_questao: string
+        +enunciado: string
+        +tipo_questao: string
+        +resposta_correta: string
+    }
+
+    class QuestaoAlternativa {
+        +id_alternativa: int
+        +id_questao: int
+        +alternativa_a: string
+        +alternativa_b: string
+        +alternativa_c: string
+        +alternativa_d: string
+        +alternativa_e: string
+    }
+
+    %% ============================
+    %% GRUPO: MODELS (RESOLUÇÕES)
+    %% ============================
+
+    class ResolucaoQuestao {
+        +id_resolucao: int
+        +id_usuario: int
+        +id_questao_original: int
+        +alternativa_marcada: string
+        +acertou: bool
+    }
+
+    class ResolucaoQuestaoAlternativa {
+        +id_alternativa: int
+        +id_resolucao: int
+        +alternativa_a: string
+        +alternativa_b: string
+        +alternativa_c: string
+        +alternativa_d: string
+        +alternativa_e: string
+    }
+
+    %% ============================
+    %% RELACIONAMENTOS
+    %% ============================
+
+    AuthController --> Usuario
+    AuthController --> TokenVerificacao
+
+    UsuarioController --> Usuario
+
+    DisciplinaController --> Disciplina
+
+    QuestaoController --> Questao
+    QuestaoController --> QuestaoAlternativa
+    QuestaoController --> Disciplina
+
+    ResolucaoQuestaoController --> ResolucaoQuestao
+    ResolucaoQuestaoController --> Questao
+    ResolucaoQuestaoController --> ResolucaoQuestaoAlternativa
+
+    DashboardController --> ResolucaoQuestao
+
+    TokenVerificacao --> Usuario
+    Usuario --> ResolucaoQuestao
+    ResolucaoQuestao --> Questao : questaoOriginal >
+    ResolucaoQuestao --> ResolucaoQuestaoAlternativa
+    Disciplina --> Questao
+    Questao --> QuestaoAlternativa
+
+
+
+```
+
+## Diagrama completo 
 
 
 ```mermaid
@@ -215,7 +380,7 @@ classDiagram
     }
 
     %% ============================
-    %% MODELS - CADERNOS (NOVO)
+    %% MODELS - CADERNOS (FORA DO MVP)
     %% ============================
 
     class Caderno {
@@ -236,7 +401,7 @@ classDiagram
     }
 
     %% ============================
-    %% MODELS - SIMULADOS (NOVO)
+    %% MODELS - SIMULADOS (FORA DO MVP)
     %% ============================
 
     class Simulado {
@@ -264,48 +429,40 @@ classDiagram
     }
 
     %% ============================
-    %% RELACIONAMENTOS ENTRE MODELS
+    %% RELACIONAMENTOS
     %% ============================
 
-    TokenVerificacao --> Usuario : belongsTo
-    Usuario --> ResolucaoQuestao : hasMany
-    ResolucaoQuestao --> ResolucaoQuestaoAlternativa : hasOne
+    TokenVerificacao --> Usuario 
+    Usuario --> ResolucaoQuestao
+    ResolucaoQuestao --> ResolucaoQuestaoAlternativa
     ResolucaoQuestao --> Questao : questaoOriginal >
-    Disciplina --> Questao : hasMany
-    Questao --> QuestaoAlternativa : hasMany
+    Disciplina --> Questao
+    Questao --> QuestaoAlternativa
 
-    %% --- CADERNOS (NOVOS)
-    Usuario --> Caderno : hasMany
-    Caderno --> CadernoQuestao : hasMany
-    CadernoQuestao --> Questao : belongsTo
+    Usuario --> Caderno
+    Caderno --> CadernoQuestao
+    CadernoQuestao --> Questao
 
-    %% --- SIMULADOS (NOVOS)
-    Usuario --> Simulado : hasMany
-    Simulado --> SimuladoQuestao : hasMany
-    Simulado --> SimuladoDisciplina : hasMany
-    SimuladoQuestao --> Questao : belongsTo
-    SimuladoDisciplina --> Disciplina : belongsTo
+    Usuario --> Simulado
+    Simulado --> SimuladoQuestao
+    Simulado --> SimuladoDisciplina
+    SimuladoQuestao --> Questao
+    SimuladoDisciplina --> Disciplina
 
-    %% ============================
-    %% Controllers usam Models
-    %% ============================
+    AuthController --> Usuario
+    AuthController --> TokenVerificacao
 
-    AuthController --> Usuario : usa >
-    AuthController --> TokenVerificacao : usa >
+    UsuarioController --> Usuario
+    QuestaoController --> Questao
+    QuestaoController --> QuestaoAlternativa
+    QuestaoController --> Disciplina
 
-    UsuarioController --> Usuario : usa >
-    QuestaoController --> Questao : usa >
-    QuestaoController --> QuestaoAlternativa : usa >
-    QuestaoController --> Disciplina : usa >
+    ResolucaoQuestaoController --> ResolucaoQuestao
+    ResolucaoQuestaoController --> Questao
+    ResolucaoQuestaoController --> ResolucaoQuestaoAlternativa
 
-    ResolucaoQuestaoController --> ResolucaoQuestao : usa >
-    ResolucaoQuestaoController --> Questao : usa >
-    ResolucaoQuestaoController --> ResolucaoQuestaoAlternativa : usa >
-
-    DisciplinaController --> Disciplina : usa >
-    DashboardController --> ResolucaoQuestao : usa >
-
-
+    DisciplinaController --> Disciplina
+    DashboardController --> ResolucaoQuestao
 
 ```
 

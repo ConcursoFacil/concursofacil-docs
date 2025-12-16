@@ -15,12 +15,12 @@ flowchart LR
 
     subgraph UserSide[Camada do Usuário]
         U((Usuário))
-        FE[Frontend<br>Vue.js]
+        FE["Frontend\nVue.js"]
     end
 
     subgraph Services[APIs / Serviços]
-        AuthApi[API de Autenticação<br>concursofacil-auth]
-        BackendApi[API Principal<br>concursofacil-backend]
+        AuthApi["API de Autenticação\nconcursofacil-auth"]
+        BackendApi["API Principal\nconcursofacil-backend"]
     end
 
     subgraph Data[Persistência de Dados]
@@ -40,20 +40,16 @@ flowchart LR
     %% ============================
     %% COLORS / STYLES
     %% ============================
-    %% Subgraph backgrounds
+
     style UserSide fill:#e8f1ff,stroke:#b5cffd,stroke-width:1px,color:#000
     style Services fill:#f0f0f0,stroke:#d0d0d0,stroke-width:1px,color:#000
     style Data fill:#e8ffe8,stroke:#a6d8a6,stroke-width:1px,color:#000
 
-    %% Node styles
     style U fill:#ffffff,stroke:#3b73ff,stroke-width:2px,color:#003399
     style FE fill:#dce6ff,stroke:#3b73ff,stroke-width:1px,color:#003399
-
     style AuthApi fill:#ffffff,stroke:#888,stroke-width:1px
     style BackendApi fill:#ffffff,stroke:#888,stroke-width:1px
     style DB fill:#ffffff,stroke:#2c7a2c,stroke-width:1.5px,color:#135e13
-
-
 
 
 ```
